@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+/* VARIABLES */
+:root {
+    --primary: #fff;
+    --accent: #eed595;    
+    --dark: #333;
+    --shadow: 0 0 3rem rgba(0,0,0,0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+body {
+    background: #eee;
+}
+
+.btn {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 900;
+    font-size: .9rem;
+    background: var(--accent);
+    padding: .8rem 2rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    display: inline-block;
+}
+/* ---------------- MOBILE SETTINGS ---------------- */ 
+
+/* LANDING PAGE */
+
+.landing-page {
+    background-image: url(https://source.unsplash.com/random/1920x1080/?wallpaper,landscape);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #555;
+    background-blend-mode: multiply;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    padding: 2rem;    
+}
+
+.landing-page h1 {
+    font-size: 2.3rem;
+    text-shadow: 0 0 1rem rgba(0,0,0,.7);
+    padding: 0.8rem;
+    margin: 1rem auto;
+    border: 3px solid var(--accent)    
+}
+
+.landing-page p {    
+    font-size: 1rem;
+    text-align: center;
+    max-width: 80%;
+    text-shadow: 0 0 1rem rgba(0,0,0,.7);
+    margin-bottom: 2rem;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/* ---------------- TABLET SETTINGS ---------------- */
+@media all and (min-width: 425px) {
+
+}
+
