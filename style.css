@@ -47,11 +47,11 @@ body {
 /* LANDING PAGE */
 
 .landing-page {
-    background-image: url(https://source.unsplash.com/random/1920x1080/?wallpaper,landscape);
+    background-image: url(img/foto4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #555;
+    background-color: #333;
     background-blend-mode: multiply;
     height: 100vh;
     display: flex;
@@ -62,12 +62,8 @@ body {
     padding: 2rem;    
 }
 
-.landing-page h1 {
-    font-size: 2.3rem;
-    text-shadow: 0 0 1rem rgba(0,0,0,.7);
-    padding: 0.8rem;
-    margin-bottom: 1rem;
-    border: 3px solid var(--accent)    
+.landing-page .logo {
+    margin-bottom: 2rem;    
 }
 
 .landing-page p {    
@@ -80,14 +76,10 @@ body {
 
 /* ---------------- TABLET SETTINGS ---------------- */
 @media all and (min-width: 426px) {
-    .landing-page h1 {
-        font-size: 4.7rem;
-        border: 6px solid var(--accent)  
-    }
     .landing-page p {    
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 2rem;
-        max-width: 60%;
+        max-width: 50%;
     }
 }
 /* ---------------- LAPTOP SETTINGS ---------------- */
@@ -98,9 +90,8 @@ body {
 }
 /* ---------------- DESKTOP SETTINGS ---------------- */
 @media all and (min-width: 1025px) {
-    .landing-page h1 {
-        font-size: 6rem;
-        border: 6px solid var(--accent)  
+    .landing-page .logo {
+        width: 18%;
     }
     .landing-page p {    
         max-width: 20%;
