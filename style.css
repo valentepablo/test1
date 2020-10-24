@@ -42,6 +42,19 @@ body {
     background: var(--hover);
     color: var(--primary);
 }
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
 /* ---------------- MOBILE SETTINGS ---------------- */ 
 
 /* LANDING PAGE */
@@ -63,19 +76,30 @@ body {
 }
 
 .landing-page .logo {
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem;  
 }
 
 .landing-page p {    
     font-size: 1rem;
     text-align: center;
+    user-select: none;
     max-width: 80%;
     text-shadow: 0 0 1rem rgba(0,0,0,.7);
     margin-bottom: 2rem;
 }
 
+header {
+    background: var(--dark);
+    width: 100%;
+}
+
+/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
+/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
+/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
+/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
+
 /* ---------------- TABLET SETTINGS ---------------- */
-@media all and (min-width: 426px) {
+@media all and (min-width: 426px) and (max-width: 768px) {
     .landing-page p {    
         font-size: 1.2rem;
         margin-bottom: 2rem;
@@ -83,8 +107,9 @@ body {
     }
 }
 /* ---------------- LAPTOP SETTINGS ---------------- */
-@media all and (min-width: 769px) {
-    .landing-page p {    
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    .landing-page p {  
+        font-size: 1.2rem;  
         max-width: 40%;
     }
 }
@@ -93,7 +118,8 @@ body {
     .landing-page .logo {
         width: 18%;
     }
-    .landing-page p {    
+    .landing-page p {  
+        font-size: 1.2rem;  
         max-width: 20%;
     }
 }
