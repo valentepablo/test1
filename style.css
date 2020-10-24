@@ -43,16 +43,13 @@ body {
     color: var(--primary);
 }
 
-a {
-    text-decoration: none;
-}
-
 ul {
     list-style: none;
+    margin-bottom: 1rem;
 }
 
 li {
-    display: inline-block;
+    margin: 1rem;
 }
 
 /* ---------------- MOBILE SETTINGS ---------------- */ 
@@ -88,15 +85,98 @@ li {
     margin-bottom: 2rem;
 }
 
+/* NAVIGATION */
+
 header {
     background: var(--dark);
     width: 100%;
+    z-index: 5;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    padding: 2rem;
 }
 
-/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
-/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
-/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
-/* HACER EL HEADER CON EL VIDEO DE KEVIN POWELL */
+.nav-toggle { 
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--primary);
+    height: 2px;
+    width: 2rem;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--dark);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out 0.15s;
+}
+
+.hide {
+    display: inline;
+}
+
+header a.btn.hide {
+    display: none;
+}
+
+.fake-content {
+    height: 200vh;
+}
 
 /* ---------------- TABLET SETTINGS ---------------- */
 @media all and (min-width: 426px) and (max-width: 768px) {
@@ -112,6 +192,44 @@ header {
         font-size: 1.2rem;  
         max-width: 40%;
     }
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {        
+        all: unset;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav li.hide {
+        display: none;
+    }
+
+    nav a {
+        opacity: 1;
+        transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        color: var(--hover);
+    }
+
+    header a.btn.hide {
+        display: inline-block;
+    }
 }
 /* ---------------- DESKTOP SETTINGS ---------------- */
 @media all and (min-width: 1025px) {
@@ -121,6 +239,46 @@ header {
     .landing-page p {  
         font-size: 1.2rem;  
         max-width: 20%;
+    }
+    
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 5rem;
+    }
+
+    nav {        
+        all: unset;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+
+    nav li.hide {
+        display: none;
+    }
+
+    nav a {
+        opacity: 1;
+        transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        color: var(--hover);
+    }
+
+    header a.btn.hide {
+        display: inline-block;
     }
 }
 

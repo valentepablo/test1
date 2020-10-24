@@ -17,17 +17,21 @@
 
         <!-- NAV -->
         <header>
-            <nav class="flex-nav">
-                <img src="img/logo-header.png" alt="Logo" class="logo logo-header">
+            <img src="img/logo-header.png" alt="Logo" class="logo logo-header">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>                
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="productos.html">Productos</a></li>
                     <li><a href="proveedores.html">Proveedores</a></li>
-                </ul>
-                <a href="contacto.html" class="btn">Contacto</a>
+                    <li class="hide"><a href="contacto.html">Contacto</a></li>
+                </ul>                
             </nav>
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <a href="contacto.html" class="btn hide">Contacto</a>
         </header>
 
+        <div class="fake-content"></div>
     </body>
 </html>
