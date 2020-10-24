@@ -3,7 +3,8 @@
 /* VARIABLES */
 :root {
     --primary: #fff;
-    --accent: #eed595;    
+    --accent: #eed595; 
+    --hover: #96865d; 
     --dark: #333;
     --shadow: 0 0 3rem rgba(0,0,0,0.15);
 }
@@ -34,6 +35,12 @@ body {
     text-transform: uppercase;
     border-radius: 50px;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--hover);
+    color: var(--primary);
 }
 /* ---------------- MOBILE SETTINGS ---------------- */ 
 
@@ -59,7 +66,7 @@ body {
     font-size: 2.3rem;
     text-shadow: 0 0 1rem rgba(0,0,0,.7);
     padding: 0.8rem;
-    margin: 1rem auto;
+    margin-bottom: 1rem;
     border: 3px solid var(--accent)    
 }
 
@@ -71,12 +78,32 @@ body {
     margin-bottom: 2rem;
 }
 
-.center {
-    margin: 0 auto;
-}
-
 /* ---------------- TABLET SETTINGS ---------------- */
-@media all and (min-width: 425px) {
-
+@media all and (min-width: 426px) {
+    .landing-page h1 {
+        font-size: 4.7rem;
+        border: 6px solid var(--accent)  
+    }
+    .landing-page p {    
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        max-width: 60%;
+    }
+}
+/* ---------------- LAPTOP SETTINGS ---------------- */
+@media all and (min-width: 769px) {
+    .landing-page p {    
+        max-width: 40%;
+    }
+}
+/* ---------------- DESKTOP SETTINGS ---------------- */
+@media all and (min-width: 1025px) {
+    .landing-page h1 {
+        font-size: 6rem;
+        border: 6px solid var(--accent)  
+    }
+    .landing-page p {    
+        max-width: 20%;
+    }
 }
 
