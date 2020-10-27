@@ -5,9 +5,12 @@
     --primary: #fff;
     --accent: #eed595; 
     --hover: #96865d; 
-    --dark: #333;
+    --dark: #222;
     --shadow: 0 0 3rem rgba(0,0,0,0.15);
 }
+
+.bg-dark {background: var(--dark);}
+.bg-accent {background: var(--accent);}
 
 * {
     box-sizing: border-box;
@@ -88,13 +91,17 @@ li {
 /* NAVIGATION */
 
 header {
-    background: var(--dark);
+    background: var(--dark);    
     width: 100%;
     z-index: 5;
     text-align: center;
     position: sticky;
     top: 0;
-    padding: 1rem;
+    padding: 0.4rem 1rem;
+}
+
+.logo-header {
+    max-width: 30%;
 }
 
 .nav-toggle { 
@@ -151,6 +158,7 @@ nav {
 
 nav a {
     text-decoration: none;
+    font-size: 0.9rem;
     color: var(--primary);
     text-transform: uppercase;
     opacity: 0;
@@ -174,9 +182,72 @@ header a.btn.hide {
     display: none;
 }
 
-.fake-content {
-    height: 200vh;
+/* MAIN SECTION */
+
+
+
+.hero {
+    width: 100%;
+    display: block;
 }
+
+.container-outer {
+    padding: 3rem 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 1.3rem;    
+    line-height: 1;
+    text-align: center;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.producto {
+    background: var(--primary);
+    color: var(--dark);    
+    margin-bottom: 2rem;
+    padding: 1.5rem 2rem; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.producto div {    
+    text-align: center;
+}
+
+.producto-titulo {
+    text-transform: uppercase;
+    background: var(--dark);
+    padding: 0.3rem;
+    color: var(--primary);
+}
+
+.producto div p {
+    margin-top: 1rem;
+}
+
+.producto:nth-child(3) {
+    margin-bottom: 0;
+}
+
+.producto img {
+    width: 100%;
+    margin-top: 2rem;
+}
+
 
 /* ---------------- TABLET SETTINGS ---------------- */
 @media all and (min-width: 426px) and (max-width: 768px) {
@@ -249,7 +320,7 @@ header a.btn.hide {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem 5rem;
+        padding: 0.5rem 5rem;
     }
 
     nav {        
