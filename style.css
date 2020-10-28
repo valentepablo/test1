@@ -87,6 +87,24 @@ li {
     text-shadow: 0 0 1rem rgba(0,0,0,.7);
     margin-bottom: 2rem;
 }
+.btn-landing {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 900;
+    font-size: .9rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding: .8rem 1.5rem;
+    text-transform: uppercase;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.btn-landing:hover {
+    background: var(--dark);
+    color: var(--accent);
+}
 
 /* NAVIGATION */
 
@@ -452,11 +470,13 @@ header a.btn.hide {
 /* ---------------- DESKTOP SETTINGS ---------------- */
 @media all and (min-width: 1025px) {
     .landing-page .logo {
-        width: 18%;
+        width: 15%;
     }
-    .landing-page p {  
-        font-size: 1.2rem;  
-        max-width: 20%;
+    .landing-page h2 { 
+        font-size: 2rem;
+        width: 30%;
+        text-align: center;
+        margin-bottom: 6rem;
     }    
     /* NAV */
     .nav-toggle-label {
