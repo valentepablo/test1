@@ -79,14 +79,11 @@ li {
     margin-bottom: 2rem;  
 }
 
-.landing-page p {    
-    font-size: 1rem;
+.landing-page h2 { 
+    font-size: 1.25rem;
     text-align: center;
-    user-select: none;
-    max-width: 80%;
-    text-shadow: 0 0 1rem rgba(0,0,0,.7);
-    margin-bottom: 2rem;
-}
+    margin-bottom: 6rem;
+}    
 .btn-landing {
     text-decoration: none;
     color: var(--primary);
@@ -338,11 +335,12 @@ header a.btn.hide {
 
 /* ---------------- TABLET SETTINGS ---------------- */
 @media all and (min-width: 426px) and (max-width: 768px) {
-    .landing-page p {    
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        max-width: 50%;
-    }
+    .landing-page h2 { 
+        font-size: 1.6rem;
+        width: 60%;
+        text-align: center;
+        margin-bottom: 6rem;
+    }    
     /* HERO */
     .hero-container {
         width: 100%;
@@ -379,10 +377,12 @@ header a.btn.hide {
 }
 /* ---------------- LAPTOP SETTINGS ---------------- */
 @media all and (min-width: 769px) and (max-width: 1024px) {
-    .landing-page p {  
-        font-size: 1.2rem;  
-        max-width: 40%;
-    }
+    .landing-page h2 { 
+        font-size: 1.6rem;
+        width: 50%;
+        text-align: center;
+        margin-bottom: 6rem;
+    }    
     /* NAV */
     .nav-toggle-label {
         display: none;
