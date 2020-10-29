@@ -23,10 +23,14 @@ html {
     font-size: 16px;
     font-weight: 400;
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
-    background: #eee;
+    background: var(--accent);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .btn {
@@ -285,7 +289,7 @@ header a.btn.hide {
 }
 
 .productos {    
-    padding: 5rem 0;
+    padding: 3rem 0;
     display: flex;    
     flex-direction: column;
     flex-wrap: wrap;
@@ -298,7 +302,7 @@ header a.btn.hide {
     text-align: center; 
     margin-bottom: 2rem;
     padding: 1.5rem 2rem; 
-    border-radius: 4px;
+    /* border-radius: 4px; */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
@@ -327,6 +331,51 @@ header a.btn.hide {
     margin-bottom: 1rem;
 }
 
+.info-empresa {
+    padding: 2rem 2rem;
+    color: var(--primary);
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5;
+    margin: auto;
+}
+
+span {
+    font-weight: bold;
+    color: var(--accent);
+    letter-spacing: 0.01rem;
+}
+
+.center {
+    text-align: center;
+    margin: 2rem auto;
+}
+/* FOOTER */
+.inner-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+.logo-footer {
+    width: 50%;
+}
+
+.made-by {
+    background-color: #111;
+    color: var(--accent);
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+
+.made-by a {
+    text-decoration: none;
+    color: var(--primary);
+    transition: color 0.3s ease-in-out;
+}
+.made-by a:hover {
+    color: var(--hover);
+}
 
 /* ---------------- TABLET SETTINGS ---------------- */
 @media all and (min-width: 426px) and (max-width: 768px) {
@@ -368,6 +417,10 @@ header a.btn.hide {
     .destacados {
         font-size: 2rem;
         padding: 1rem;
+    }
+    /* FOOTER */
+    .logo-footer {
+        width: 20%;
     }
 }
 /* ---------------- LAPTOP SETTINGS ---------------- */
@@ -460,6 +513,17 @@ header a.btn.hide {
         align-items: center;
         flex-basis: 30%;
         margin-bottom: 0;
+    }
+    .info-empresa {
+        margin: auto;
+    }
+    #btn-volver {
+        display: none;
+    }
+    /* FOOTER */
+    .logo-footer {
+        width: 20%;
+        margin: auto;
     }
 }
 /* ---------------- DESKTOP SETTINGS ---------------- */
@@ -555,6 +619,14 @@ header a.btn.hide {
         align-items: center;
         flex-basis: 30%;
         margin-bottom: 0;
+    }
+    #btn-volver {
+        display: none;
+    }
+    /* FOOTER */
+    .logo-footer {
+        width: 20%;
+        margin: auto;
     }
 }
 
