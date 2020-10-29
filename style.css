@@ -22,6 +22,7 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 400;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -269,10 +270,6 @@ header a.btn.hide {
     color: var(--accent);
 }
 
-.container-outer {
-    padding: 3rem 0;
-}
-
 .container {
     width: 80%;
     max-width: 960px;
@@ -280,15 +277,16 @@ header a.btn.hide {
 }
 
 .destacados {
+    padding: 2rem 0;
     color: var(--accent);
     text-transform: uppercase;
-    font-size: 1.3rem;    
-    line-height: 1;
+    font-size: 1.3rem;
     text-align: center;
 }
 
-.productos {
-    display: flex;
+.productos {    
+    padding: 5rem 0;
+    display: flex;    
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
@@ -296,7 +294,8 @@ header a.btn.hide {
 
 .producto {
     background: var(--primary);
-    color: var(--dark);    
+    color: var(--dark);   
+    text-align: center; 
     margin-bottom: 2rem;
     padding: 1.5rem 2rem; 
     border-radius: 4px;
@@ -305,10 +304,6 @@ header a.btn.hide {
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
-
-.producto div {    
-    text-align: center;
 }
 
 .producto-titulo {
@@ -546,7 +541,6 @@ header a.btn.hide {
     /* MAIN */
     .destacados {
         font-size: 2.5rem;
-        padding: 1rem;
     }
     .productos {
         flex-direction: row;
